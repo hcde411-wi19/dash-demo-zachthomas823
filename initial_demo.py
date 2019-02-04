@@ -10,7 +10,6 @@ counts_in_order = [160613, 154225, 155175, 150819, 146014, 215725, 203483]
 # initialize Dash environment
 
 app = dash.Dash(__name__)
-server = app.server
 
 # set up an layout
 app.layout = html.Div(children=[
@@ -29,7 +28,8 @@ app.layout = html.Div(children=[
             # configure the data
             'data': [
                 # set x to be weekday, and y to be the counts. We use bars to represent our data.
-                {'x': weekday_in_order, 'y': counts_in_order, 'type': 'bar'},
+                {'x': weekday_in_order, 'y': counts_in_order, 'type': 'bar', 'name': 'Total'},
+
             ],
             # configure the layout of the visualization --
             # set the title to be "Usage of the BGT North of NE 70th per week day"
@@ -40,9 +40,9 @@ app.layout = html.Div(children=[
     )
 ])
 
+
 if __name__ == '__main__':
     # start the Dash app
     app.run_server(debug=True)
-
 
 
