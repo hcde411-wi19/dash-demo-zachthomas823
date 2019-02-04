@@ -26,8 +26,8 @@ this repository on the Heroku URL you configure. It should be in the format
 of **https://_\<your app name\>_.herokuapp.com/** (without <>).
 ![Demo](https://i.imgur.com/7c5QXzS.png)
 
-### Exercises
-#### Exercise #1: Multiple Barchart
+## Exercises
+### Exercise #1: Multiple Barchart
 File to work on: **exercise1.py**
 
 Change our initial codes to contain not only total usage of the trail, but also 
@@ -36,14 +36,14 @@ The final view should look like the following picture:
 ![Exercise 1 finished](https://i.imgur.com/pRLeJP4.png)
 
 
-#### Exercise #2: Visualize Data of Your Choice
+### Exercise #2: Visualize Data of Your Choice
 
 File to work on: **exercise2.py**
 
 Create another visualization of your choice of data and chart type. 
 You can use pandas to help loading data, or just hard-coded the data is fine.
 
-#### Exercise #3: Add Interactivity
+### Exercise #3: Add Interactivity
 
 File to work on: **exercise3.py**
 
