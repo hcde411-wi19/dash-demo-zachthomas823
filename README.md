@@ -1,4 +1,4 @@
-#HCDE 411 Python Lab #3 Building Interactive Web Visualization in Python via Plotly/Dash
+# HCDE 411 Python Lab #3 Building Interactive Web Visualization in Python via Plotly/Dash
 
 This repository contains exercise codes for you to learn how to use 
 [Dash](https://dash.plot.ly/) to build interactive web visualization. 
@@ -32,6 +32,7 @@ File to work on: **exercise1.py**
 Change our initial codes to contain not only total usage of the trail, but also 
 breakdowns of the types of usage (Ped N, Ped S, Bike N, Bike S). 
 The final view should look like the following picture:
+![Exercise 1 finished](https://i.imgur.com/pRLeJP4.png)
 
 
 #### Exercise #2: Visualize Data of Your Choice
