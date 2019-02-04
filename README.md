@@ -24,6 +24,7 @@ the detailed steps can be found on our slides.
 If you do the setup correctly, you should be able to see a live version of 
 this repository on the Heroku URL you configure. It should be in the format
 of **https://_\<your app name\>_.herokuapp.com/** (without <>).
+![Demo](https://i.imgur.com/7c5QXzS.png)
 
 ### Exercises
 #### Exercise #1: Multiple Barchart
