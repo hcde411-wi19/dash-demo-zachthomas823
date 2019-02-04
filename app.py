@@ -3,31 +3,46 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+# static data
+weekday_in_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+counts_in_order = [160613, 154225, 155175, 150819, 146014, 215725, 203483]
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+# initialize Dash environment
+
+app = dash.Dash(__name__)
 server = app.server
 
+# set up an layout
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    # H1 title on the page
+    html.H1(children='Hello Dash for HCDE 411'),
 
+    # a div to put a short description
     html.Div(children='''
-        Dash: A web application framework for Python.
+        This is a simple Dash application for HCDE 411
     '''),
 
+    # append the visualization to the page
     dcc.Graph(
         id='example-graph',
         figure={
+            # configure the data
             'data': [
-                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'A'},
-                {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': 'B'},
+                # set x to be weekday, and y to be the counts. We use bars to represent our data.
+                {'x': weekday_in_order, 'y': counts_in_order, 'type': 'bar'},
             ],
+            # configure the layout of the visualization --
+            # set the title to be "Usage of the BGT North of NE 70th per week day"
             'layout': {
-                'title': 'Dash Data Visualization'
+                'title': 'Usage of the BGT North of NE 70th per week day'
             }
         }
     )
 ])
 
 if __name__ == '__main__':
+    # start the Dash app
     app.run_server(debug=True)
+
+
+
