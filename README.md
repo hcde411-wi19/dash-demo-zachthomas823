@@ -7,9 +7,7 @@ instance to run your own python visualization work, just like what we have:
 https://hcde411-wi19-dash-demo.herokuapp.com/ .
 
 
-## Instructions 
-
-### Initial Setup
+## Initial Setup
 Before start working on this lab, you should accept our 
 [GitHub Classroom assignment](https://classroom.github.com/a/pwOFdIcK) to get a copy of this repository. 
 The new repository should be named **hcde411-wi19/dash-demo-_\<your github account\>_**.
