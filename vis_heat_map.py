@@ -23,22 +23,22 @@ dg = df.groupby(pd.Grouper(key='Date', freq='1M')).sum()
 dg.index = dg.index.strftime('%Y-%m')
 dg.index.name = 'Month'
 
-fields = [title for title in list(dg) if title != "Date"]
+exclude = ['Date', 'BGT North of NE 70th Total']
+fields = [title for title in list(dg) if title not in exclude]
 # define z, which contains the values that we use "heat" to represent
 z = []
 for idx, field in enumerate(fields):
-    z.append(dg[field].to_list())
-
+    z.append(dg[field])
 
 # set layout of the page
 app.layout = html.Div(children=[
 
     # set the page heading
-    html.H1(children='Line Chart'),
+    html.H1(children='Heatmap'),
 
     # set the description underneath the heading
     html.Div(children='''
-        A demo to show a line chart.
+        A demo to show a heatmap.
     '''),
 
     # append the visualization to the page
@@ -46,9 +46,15 @@ app.layout = html.Div(children=[
         id='example-graph',
         figure={
             # configure the data
-            'data': series,
+            'data': [
+                # This is how a heatmap is defined -- x is the same as the one we had in the line chart
+                # y is break down usage, and z is the corresponding counts over time
+                go.Heatmap(z=z,
+                           x=dg.index,
+                           y=fields)
+            ],
             'layout': {
-                'title': 'Monthly usage of the BGT North of NE 70th over time',
+                'title': 'Monthly usage break down of the BGT North of NE 70th over time',
             }
         }
     )

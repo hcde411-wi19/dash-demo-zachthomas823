@@ -32,7 +32,7 @@ series = []
 max_y = 0
 
 # This is how you make a plot that contains multiple subplots.
-# In this case, the number of rows are the number of top hashtags,
+# In this case, the number of rows are the number of fields,
 # and the number of cols is one.
 # The x axes are set to be shared so that all plots use the same one
 fig = tools.make_subplots(rows=len(fields), cols=1, shared_xaxes=True)
